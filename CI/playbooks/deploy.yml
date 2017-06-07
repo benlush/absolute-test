@@ -1,0 +1,7 @@
+- hosts: localhost
+  tasks:
+    - apt: "name=nginx state=present"
+    - command: "pip install {{ item }}"
+      with_items: [flask, uwsgi]
+    - file: name=/opt/absolute state=directory
+      tags: [configure]
