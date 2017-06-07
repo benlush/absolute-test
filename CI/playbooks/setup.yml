@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+    - debug: vars=ansible_host
+    - command: "echo hello world"
