@@ -1,3 +1,4 @@
 - hosts: localhost
   tasks:
     - copy: "src={{ playbook_dir }}/../../src/hello.py dest=/opt/absolute"
+    - shell: "nohup python /opt/absolute/hello.py 2>&1 &"
