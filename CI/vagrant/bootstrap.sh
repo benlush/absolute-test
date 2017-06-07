@@ -17,3 +17,5 @@ else
 fi
 
 ansible-playbook CI/playbooks/setup.yml --tags "install,configure"
+
+ansible-playbook CI/playbooks/deploy.yml
