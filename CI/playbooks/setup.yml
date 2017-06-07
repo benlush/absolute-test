@@ -1,4 +1,3 @@
 - hosts: localhost
   tasks:
-    - debug: var=ansible_host
-    - command: "echo hello world"
+    - apt: "name=nginx state=present"
