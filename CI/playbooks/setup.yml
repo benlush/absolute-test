@@ -1,5 +1,7 @@
 - hosts: localhost
   tasks:
     - apt: "name=nginx state=present"
+      tags: [install]
     - command: "pip install {{ item }}"
       with_items: [flask, uwsgi]
+      tags: [install]
